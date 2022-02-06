@@ -35,3 +35,5 @@ yonetici
 ```bash
 12345
 ```
+
+Pod'un arabiriminden çıkmak için `exit`{{execute}} komutunu kullanalım.
