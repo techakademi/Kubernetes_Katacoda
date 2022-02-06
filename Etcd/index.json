@@ -1,0 +1,57 @@
+{
+  "title": "ETCD Senaryo",
+  "description": "Bu interaktif senaryo ile, Ubuntu sunucusuna etcd'yi yükleme çalışmasını gerçekleştirebiliriz.",
+  "difficulty": "Beginner",
+  "time": "10",
+  "details": {
+    "steps": [
+      {
+        "title": "Birinci Bölüm",
+        "text": "step1.md"
+      },
+      {
+        "title": "İkinci Bölüm",
+        "text": "step2.md"
+      },
+      {
+        "title": "Üçüncü Bölüm",
+        "text": "step3.md"
+      },
+      {
+        "title": "Dördüncü Bölüm",
+        "text": "step4.md",
+        "foreground": "step4-foreground.sh"
+      }
+      
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "etcd-kontrol.sh",
+          "target": "~/",
+          "chmod": "+x"
+        },
+        {
+          "file": "etcd-temizle.sh",
+          "target": "~/",
+          "chmod": "+x"
+        }
+      ]
+    } 
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mEtcd kurulumu Terminali. Iyi dersler :)\u001b[m"
+    
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  },
+  "embedded_survey_url": "https://docs.google.com/forms/d/e/1FAIpQLSc-fxXZi42r7BDAaU6CLZSwZFK2OyvQPAjE90_Wk1FSTcTC2A/viewform"
+}

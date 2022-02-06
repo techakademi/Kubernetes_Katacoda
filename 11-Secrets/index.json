@@ -1,0 +1,54 @@
+{
+  "title": "Secrets Oluşturma Senaryosu",
+  "description": "Bu bölümde, Secrets konusunu işliyoruz.",
+  "difficulty": "Giriş Seviyesi",
+  "time": "15",
+  "details": {
+    "steps": [
+      {
+        "title": "Kubernetes Secrets hakkında ön bilgi.",
+        "text": "step1.md"
+      },
+      {
+        "title": "Kubernetes Secret oluşturmak & kullanmak.",
+        "text": "step2.md"
+      },
+      {
+        "title": "Secret'i bir veribirimi şeklinde kullanmak.",
+        "text": "step3.md"
+      },
+
+      {
+        "title": "Manifest belgesi kullanarak secret oluşturmak.",
+        "text": "step4.md"
+      },
+
+      {
+        "title": "Belge veya dosyadan secret oluşturmak.",
+        "text": "step5.md"
+      },
+
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "baslangic.sh",
+      "credits": "[Kişisel blog Hamza GURCAN](http://www.hamzagurcan.com)"
+    },
+
+    "finish": {
+      "text": "finish.md"
+    },
+
+    "assets": {
+      "host01": [{"file": "*.yml", "target": "/root"}]
+    }
+  },
+  "environment": {
+    "hideintro": false,
+    "uimessage1": "\u001b[32mİyi dersler dilerim :).\u001b[m\r\n",
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
