@@ -6,7 +6,7 @@ Secret Pod oluşturmak için  [21-Secret-Vol-Pod.yml](./assets/21-Secret-Vol-Pod
 
 1.Adım, pod'umuzu çalıştıralım:
 
-`kubectl apply -f 21-Secret-Vol-Pod.yml`{{execute}}
+`kubectl apply -f 21-Secret-Vol-Pod.yml`{{execute T1}}
 
 ```bash
 pod/deneme-secret-volpodu created
@@ -16,7 +16,7 @@ pod/deneme-secret-volpodu created
 
 **Pod'a erişmek için Status'un "running" olduğundan emin ol.**
 
-`kubectl exec -it deneme-secret-volpodu -- sh`{{execute}}
+`kubectl exec -it deneme-secret-volpodu -- sh`{{execute T1}}
 
 `ls vars/gizli/`{{execute}}
 
@@ -38,4 +38,4 @@ yonetici
 12345
 ```
 
-Pod'un arabiriminden çıkmak için `exit`{{execute}} komutunu kullanalım.
+Pod'un arabiriminden çıkmak için `exit`{{execute}} komutunu kullanarak çıkıp sonraki bölüme geçelim.

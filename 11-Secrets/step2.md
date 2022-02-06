@@ -46,8 +46,8 @@ pod/deneme-secret-podu created
 Pod'un ortam değişkenlerini okumak için interaktif shell ile konteynere erişip değerleri görelim.
 
 **Pod'a erişmek için Status'un "running" olduğundan emin ol.**
- 
-`kubectl exec -it deneme-secret-podu -- env`{{execute}}
+
+`kubectl exec -it deneme-secret-podu -- env`{{execute T1}}
 
 ```bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
