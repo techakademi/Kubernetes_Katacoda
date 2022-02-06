@@ -6,7 +6,7 @@ Kalıcı değer kullanarak oluşturacağımız bu Secretin türü **"generic"** 
 
 1. Adım Kullanıcı adı parola barındıran bir secret oluşturalım:
 
-`kubectl create secret generic deneme-secret --from-literal=kullanici=yonetici --from-literal=parola=12345`{{execute}}
+`kubectl create secret generic deneme-secret --from-literal=kullanici=yonetici --from-literal=parola=12345`{{execute T1}}
 
 Secretin oluşturulduğunun teyit eden komut aşağıda ki gibi olacaktır:
 
@@ -16,7 +16,7 @@ secret/deneme-secret created
 
 2.Adım, secretin içeriğini inceleyelim:
 
-`kubectl describe secrets deneme-secret`{{execute}}
+`kubectl describe secrets deneme-secret`{{execute T1}}
 
 ```bash
 Name:         deneme-secret
@@ -36,7 +36,8 @@ parola:     5 bytes
 
 Secret Pod oluşturmak için  [20-Secret-Env-Pod.yml](./assets/20-Secret-Env-Pod.yml) belgesinde konteynerin ortam değişkeni olarak kullanacağı değerleri içeren manifest hazır durumdadır.
 
-`kubectl apply -f 20-Secret-Env-Pod.yml`{{execute}}
+
+`kubectl apply -f 20-Secret-Env-Pod.yml`{{execute T1}}
 
 ```bash
 pod/deneme-secret-podu created
@@ -44,6 +45,8 @@ pod/deneme-secret-podu created
 
 Pod'un ortam değişkenlerini okumak için interaktif shell ile konteynere erişip değerleri görelim.
 
+**Pod'a erişmek için Status'un "running" olduğundan emin ol.**
+ 
 `kubectl exec -it deneme-secret-podu -- env`{{execute}}
 
 ```bash

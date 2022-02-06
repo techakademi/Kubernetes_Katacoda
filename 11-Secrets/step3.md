@@ -14,6 +14,8 @@ pod/deneme-secret-volpodu created
 
 2.Adım, oluşturduğumuz Pod'un arayüzüne erişip monte ettiğimiz veribirimi dizinine gidip hassas verilerimizi inceleyelim.
 
+**Pod'a erişmek için Status'un "running" olduğundan emin ol.**
+
 `kubectl exec -it deneme-secret-volpodu -- sh`{{execute}}
 
 `ls vars/gizli/`{{execute}}

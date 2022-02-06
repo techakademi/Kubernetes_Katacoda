@@ -19,9 +19,14 @@ bXVodGVzZW1wYXJvbGE=
 
 2.Adım, kodlanmış değerler ile aşağıda ki örnekte olduğu gibi bir manifest oluşturalım.
 
+Yeni bir manifest oluşturmak için nano editörünü kullanalım.
+
 `sudo nano 22-Secret-kod1.yml`{{execute}}
 
-### Manifestimiz aşağıdaki gibi olmalı
+
+#### 1. Adım, Aşğıdaki manifesti kopyalayıp nano editörüne yapıştıralım.
+#### 2. Adım, ctr+o belgeyi kayıt edelim.
+#### 3. Adım, ctr+x ile nano'dan çıkalım.
 
 ```yaml
 apiVersion: v1
@@ -43,6 +48,7 @@ secret/secret-manifest created
 ```
 
 4.Adım, Manifest ile oluşturduğumuz secret'i bir pod'a volume olarak ekleyerek erişelim.
+
 
 `kubectl apply -f 23-Secret-Vol-Kod-Pod.yml`{{execute}}
 
@@ -88,7 +94,9 @@ bXVodGVzZW1wQHIwbGE=
 
 `sudo nano 22-Secret-kod2.yml`{{execute}}
 
-### Yeni manifestimiz aşağıdaki gibi olmalı
+#### 1. Adım, Aşğıdaki manifesti kopyalayıp nano editörüne yapıştıralım.
+#### 2. Adım, ctr+o belgeyi kayıt edelim.
+#### 3. Adım, ctr+x ile nano'dan çıkalım.
 
 ```yaml
 apiVersion: v1
@@ -101,6 +109,8 @@ data:
   parola: bXVodGVzZW1wQHIwbGE=
 ```
 
+`kubectl apply -f 22-Secret-kod2.yml`{{execute}}
+
 ```sh
 secret/secret-manifest configured
 ```
@@ -108,6 +118,9 @@ secret/secret-manifest configured
 Bu manifest'de dikkat ederseniz değiştirdiğimiz anahtar değer, yalnızca parolanın ki oldu, diğer tüm değerler aynı şekilde kaldı. Eğer ***"secret-manifest"*** adını değiştirecek olsaydık, o zaman bu Kubernetes için yeni bir nesne olacak idi, ancak sadece ***"parola"*** anahtarını değiştirdiğimiz için, bu durum Kubernetes için ilgili secret'i güncelleme işlemi olmaktadır.
 
 Parola değişikliğini gözlemleyelim.
+
+---Not:
+Scheduler'in ETCD'de ki değişikliği okuyup pod'a yansıtması biraz zaman alabilir, aşağıda komutu bir kaç sefer denemeniz gerekebilir.
 
 `kubectl exec secret-manifest-podu -- cat vars/gizli-kod/parola`{{execute}}
 
