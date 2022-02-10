@@ -1,5 +1,5 @@
 
-##### Bu bölümde, Secrets konusunu işliyoruz.
+##### Bu bölümde, ConfigMaps konusunu işliyoruz.
 
 ___
 
