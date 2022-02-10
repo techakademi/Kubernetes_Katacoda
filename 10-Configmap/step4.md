@@ -8,7 +8,11 @@ Pinger uygulamasının çalışması için ihtiyacı olan parametreleri, bir ver
 
 1.Adım, Uygulama değişkenimizi içeren parametreleri barındıran manifest'imizi oluşturalım.
 
-`sudo nano 27-1-Pinger-Config.yml`{{execute}}
+##### 1. Adım, Aşğıdaki manifesti kopyalayıp nano editörüne Shift+Insert ile yapıştıralım.
+##### 2. Adım, ctr+o belgeyi kayıt edelim.
+##### 3. Adım, ctr+x ile nano'dan çıkalım.
+
+`sudo nano 27-1-Pinger-Config.yml`{{execute T1}}
 
 ### İlk manifestimiz aşağıdaki gibi olmalı
 
@@ -26,7 +30,7 @@ data:
 
 2.Adım, ConfigMap'ımızı oluşturalım:
 
-`kubectl apply -f 26-1-Dns-Config.yml`{{execute}}
+`kubectl apply -f 27-1-Pinger-Config.yml`{{execute T1}}
 
 ```bash
 configmap/adres-map created
@@ -36,7 +40,7 @@ ConfigMap'ı kullanacak Pod oluşturmak için  [27-Pinger-Conf_Vol.yml](./assets
 
 3.Adım, Dns kontrolünü gerçekleştirecek Podumuzu çalıştıralım.
 
-`kubectl apply -f 27-Pinger-Conf-Vol.yml`{{execute}}
+`kubectl apply -f 27-Pinger-Conf-Vol.yml`{{execute T1}}
 
 ```bash
 pod/adres-test-pod created
@@ -44,7 +48,9 @@ pod/adres-test-pod created
 
 4.Adım, adres-test-pod Pdo'umuzun loglarını kontrol ederek sonucunu öğrenelim.
 
-`kubectl logs adres-test-pod`{{execute}}
+**Pod'un işlemlerini bitirmiş olduğu gözlem ekranından kontrol etmeyi unutma.**
+
+`kubectl logs adres-test-pod`{{execute T1}}
 
 ```bash
 one.one.one.one is alive
@@ -57,9 +63,11 @@ Sonuç beklendiği gibi başarılı, ancak diyelim ki pinglemek istediğimiz adr
 
 5.Adım, IP adreslerini içeren ConfigMap'ımıza yenilerini ekleyip güncelleyelim. Adres güncellemesi için aynı manfiestimizi kullanacağız, başka bir isimle kullanacak olursak bu yeni bir ConfigMap olacaktır.
 
-`sudo nano 27-1-Pinger-Config.yml`{{execute}}
+##### 1. Adım, Aşğıdaki manifesti kopyalayıp nano editörüne Shift+Insert ile yapıştıralım.
+##### 2. Adım, ctr+o belgeyi kayıt edelim.
+##### 3. Adım, ctr+x ile nano'dan çıkalım.
 
-### Manifestimiz aşağıdaki gibi değiştirip kayıt edelim
+`sudo nano 27-1-Pinger-Config.yml`{{execute T1}}
 
 ```yaml
 apiVersion: v1
@@ -75,7 +83,8 @@ data:
 ```
 
 6.Adım, ConfigMap'ımızı güncelleyelim.
-`kubectl apply -f 27-1-Pinger-Config.yml`{{execute}}
+
+`kubectl apply -f 27-1-Pinger-Config.yml`{{execute T1}}
 
 ```bash
 configmap/adres-map configured
@@ -83,7 +92,7 @@ configmap/adres-map configured
 
 7.Adım, daha önce çalıştırdığımız Pod'umuz halen mevcut olduğundan onu imha ederek yeniden oluşturalım.
 
-`kubectl delete pod adres-test-pod`{{execute}}
+`kubectl delete pod adres-test-pod`{{execute T1}}
 
 ```bash
 pod/adres-test-pod deleted
@@ -91,7 +100,7 @@ pod/adres-test-pod deleted
 
 8.Adım, Podumuzu tekrar oluşturalım.
 
-`kubectl apply -f 27-Pinger-Conf-Vol.yml`{{execute}}
+`kubectl apply -f 27-Pinger-Conf-Vol.yml`{{execute T1}}
 
 ```bash
 pod/adres-test-pod created
@@ -99,7 +108,7 @@ pod/adres-test-pod created
 
 9.Adım, Podumuzun log'unu kontrol ederek sonucunu görelim.
 
-`kubectl logs adres-test-pod`{{execute}}
+`kubectl logs adres-test-pod`{{execute T1}}
 
 ```bash
 one.one.one.one is alive

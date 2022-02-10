@@ -6,7 +6,7 @@ Bu uygulamada, **"kubcetl create configmap"** komut aracı ile bir ortam değiş
 
 1. Adım Kullanıcı adı parola barındıran bir secret oluşturalım:
 
-`kubectl create configmap merhaba-map --from-literal=selam=merhaba-Kubernetes-Dunyasi`{{execute}}
+`kubectl create configmap merhaba-map --from-literal=selam=merhaba-Kubernetes-Dunyasi`{{execute T1}}
 
 SecrConfigMap'in oluşturulduğunu teyit eden komut aşağıda ki gibi olacaktır:
 
@@ -16,7 +16,7 @@ configmap/merhaba-map created
 
 2.Adım, secretin içeriğini inceleyelim:
 
-`kubectl describe configmap merhaba-map`{{execute}}
+`kubectl describe configmap merhaba-map`{{execute T1}}
 
 ```bash
 Name:         merhaba-map
@@ -40,7 +40,7 @@ Events:  <none>
 
 ConfigMap Pod oluşturmak için  [25-Conf-Merhaba-Map.yml](./assets/25-Conf-Merhaba-Map.yml) belgesinde konteynerin ortam değişkeni olarak kullanacağı değerleri içeren manifest hazır durumdadır.
 
-`kubectl apply -f 25-Conf-Merhaba-Map.yml`{{execute}}
+`kubectl apply -f 25-Conf-Merhaba-Map.yml`{{execute T1}}
 
 ```bash
 pod/merhabamap-env-pod created
@@ -48,7 +48,7 @@ pod/merhabamap-env-pod created
 
 Pod'un ortam değişkenlerini okumak için interaktif shell ile konteynere erişip değerleri görelim.
 
-`kubectl exec -it merhabamap-env-pod -- sh`{{execute}}
+`kubectl exec -it merhabamap-env-pod -- sh`{{execute T1}}
 
 ```bash
 / #
@@ -62,6 +62,10 @@ Konteyner arayüzünde bulunduğumuz sırada **echo** ile ortam değişkeni olar
 merhaba-Kubernetes-Dunyasi
 / #
 ```
+
+Exit ile Pod'dan çıkalım.
+
+`exit`{{execute T1}}
 
 merhaba-map ConfigMap'ında oluşturduğumuz selam değişkeninin değeri olan ***"merhaba-Kubernetes-Dunyasi"*** konteynerimiz tarafından okunarak aktarımı bu şekilde gerçekleşmiş oldu.
 

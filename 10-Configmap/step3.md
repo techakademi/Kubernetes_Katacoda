@@ -5,7 +5,7 @@ Ancak bu sefer ConfigMap'ımızı kubectl komutu yerine bir manifest ile oluştu
 
 1.Adım, Uygulama değişkenimizi içeren parametreleri barındıran manifest'imizi oluşturalım.
 
-`sudo nano 26-1-Dns-Config.yml`{{execute}}
+`sudo nano 26-1-Dns-Config.yml`{{execute T1}}
 
 ### Manifestimiz aşağıdaki gibi olmalı
 
@@ -22,7 +22,7 @@ data:
 
 2.Adım, ConfigMap'ımızı oluşturalım:
 
-`kubectl apply -f 26-1-Dns-Config.yml`{{execute}}
+`kubectl apply -f 26-1-Dns-Config.yml`{{execute T1}}
 
 ```bash
 configmap/dns-map created
@@ -32,7 +32,7 @@ ConfigMap'ı kullanacak Pod oluşturmak için  [26-Conf-Dns-Env.yml](./assets/26
 
 3.Adım, Dns kontrolünü gerçekleştirecek Podumuzu çalıştıralım.
 
-`kubectl apply -f 26-Conf-Dns-Env.yml`{{execute}}
+`kubectl apply -f 26-Conf-Dns-Env.yml`{{execute T1}}
 
 ```bash
 pod/dns-kontrol-conf created
@@ -40,7 +40,9 @@ pod/dns-kontrol-conf created
 
 4.Adım, dns-kontrol-conf Pdo'umuzun loglarını kontrol ederek sonucunu öğrenelim.
 
-`kubectl logs dns-kontrol-conf`{{execute}}
+**Pod'un işlemlerini bitirmiş olduğu gözlem ekranından kontrol etmeyi unutma.**
+
+`kubectl logs dns-kontrol-conf`{{execute T1}}
 
 ```bash
 dns.google is alive

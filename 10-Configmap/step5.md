@@ -6,11 +6,13 @@ Bu bölüm için hazırlamış olduğum **"techakademi/pinger:1"** adında bir u
 
 Pinger uygulamasının çalışması için ihtiyacı olan parametreleri, bir veribirimi kullanarak ekleyeceğiz, böylece konteyner çalıştığında ***adres.cfg*** belgesinde var olan ip adreslerini ***/pinger*** klasörüne montelemiş olacağımızdan ip'leri pingleme işlemini yerine getirebilecektir.
 
-1.Adım, Uygulama değişkenimizi içeren parametreleri barındıran manifest'imizi oluşturalım.
+1.Adım, Uygulama değişkenimizi içeren parametreleri barındıran adres.cfg'imizi oluşturalım.
 
-`sudo nano asres.cfg`{{execute}}
+##### 1. Adım, Aşğıdaki IP adreslerini kopyalayıp nano editörüne Shift+Insert ile yapıştıralım.
+##### 2. Adım, ctr+o belgeyi kayıt edelim.
+##### 3. Adım, ctr+x ile nano'dan çıkalım.
 
-### Aşağıdaki IP adreslerini ekleyip kayıt edip kapatalım
+`sudo nano asres.cfg`{{execute T1}}
 
 ```cfg
 208.67.222.222
@@ -21,7 +23,7 @@ Pinger uygulamasının çalışması için ihtiyacı olan parametreleri, bir ver
 
 2.Adım, ConfigMap'ımızı oluşturalım:
 
-`kubectl create configmap adres-map-belge --from-file=./adres.cfg`{{execute}}
+`kubectl create configmap adres-map-belge --from-file=./adres.cfg`{{execute T1}}
 
 ```bash
 configmap/adres-map-belge created
@@ -31,7 +33,7 @@ ConfigMap'ı kullanacak Pod oluşturmak için  [28-Pinger-Conf-Vol-Belge.yml](./
 
 3.Adım, Dns kontrolünü gerçekleştirecek Podumuzu çalıştıralım.
 
-`kubectl apply -f 28-Pinger-Conf-Vol-Belge.yml`{{execute}}
+`kubectl apply -f 28-Pinger-Conf-Vol-Belge.yml`{{execute T1}}
 
 ```bash
 pod/adres-test-pod created
@@ -39,7 +41,7 @@ pod/adres-test-pod created
 
 4.Adım, adres-test-pod-belge Pdo'umuzun arayüzüne erişelim.
 
-`kubectl exec -it adres-test-pod-belge -- sh`{{execute}}
+`kubectl exec -it adres-test-pod-belge -- sh`{{execute T1}}
 
 ```bash
 / #
@@ -69,17 +71,13 @@ Arayüzden çıkıp, ConfigMap'ımızı silelim, adres.cfg belgemize yeni IP adr
 
 `kubectl delete configmap adres-map-belge`{{execute T1}}
 
-2.Adım, adres-map-belge isimli ConfigMap'ımızı silelim.
-
-`kubectl delete configmap adres-map-belge`{{execute T1}}
-
 ```bash
 configmap "adres-map-belge" deleted
 ```
 
 3.Adım, adres.cfg belgemizi editleyip yeni IP adresi eklyelim.
 
-`sudo nano asres.cfg`{{execute}}
+`sudo nano asres.cfg`{{execute T1}}
 
 ### Aşağıdaki yeni IP adreslerini ekleyip kayıt edip kapatalım
 
@@ -98,13 +96,12 @@ configmap "adres-map-belge" deleted
 
 4.Adım, adres-map-belge ConfigMap'ımızı tekrar oluşturalım.
 
-`kubectl create configmap adres-map-belge --from-file=./adres.cfg`{{execute}}
+`kubectl create configmap adres-map-belge --from-file=./adres.cfg`{{execute T1}}
 
 5.Adım, adres-test-pod-belge Pod'umuzun arayüzüne erişip scriptimizi tekrar çalıştıralım.
 
 5.1
-
-`kubectl exec -it adres-test-pod-belge -- sh`{{execute}}
+`kubectl exec -it adres-test-pod-belge -- sh`{{execute T1}}
 
 5.2
 `./home/pinger.sh`{{execute T1}}
@@ -135,22 +132,39 @@ Pinglenen IP 76.223.122.150 : Durumu Basarili
 Uygulamamız yeni parametreleri kullanarak eklenen IP adreslerini başarılı bir şekilde tamamını pinglemeyi başardı.
 
 Pod'umuzdan çıkış yapalım.
+
 `exit`{{execute T1}}
 
 `kubectl delete pod adres-test-pod-belge`{{execute T1}}
+
+```bash
 pod "adres-test-pod-belge" deleted
+```
 
 `kubectl delete configmaps merhaba-map`{{execute T1}}
+
+```bash
 configmap "merhaba-map" deleted
+```
 
 `kubectl delete configmaps dns-map`{{execute T1}}
+
+```bash
 configmap "dns-map" deleted
+```
 
 `kubectl delete configmaps adres-map-belge`{{execute T1}}
+
+```bash
 configmap "adres-map-belge" deleted
+```
 
 `kubectl delete configmaps adres-map`{{execute T1}}
+
+```bash
 configmap "adres-map" deleted
+```
+
 ---
 
 ##### Kubernetes'de ConfigMaps temel olarak bu yöntemler ile kullanılabilir, ConfigMaps bölümümüz burada tamamlanmıştır.
