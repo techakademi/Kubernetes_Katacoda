@@ -14,7 +14,7 @@ SecrConfigMap'in oluşturulduğunu teyit eden komut aşağıda ki gibi olacaktı
 configmap/merhaba-map created
 ```
 
-2.Adım, secretin içeriğini inceleyelim:
+2.Adım, ConfigMap'ın içeriğini inceleyelim:
 
 `kubectl describe configmap merhaba-map`{{execute T1}}
 
@@ -47,6 +47,8 @@ pod/merhabamap-env-pod created
 ```
 
 Pod'un ortam değişkenlerini okumak için interaktif shell ile konteynere erişip değerleri görelim.
+
+**Pod'a erişmek için Status'un "running" olduğundan emin ol.**
 
 `kubectl exec -it merhabamap-env-pod -- sh`{{execute T1}}
 

@@ -7,7 +7,9 @@ Ancak bu sefer ConfigMap'ımızı kubectl komutu yerine bir manifest ile oluştu
 
 `sudo nano 26-1-Dns-Config.yml`{{execute T1}}
 
-### Manifestimiz aşağıdaki gibi olmalı
+##### 1. Adım, Aşğıdaki manifesti kopyalayıp nano editörüne Shift+Insert ile yapıştıralım.
+##### 2. Adım, ctr+o belgeyi kayıt edelim.
+##### 3. Adım, ctr+x ile nano'dan çıkalım.
 
 ```yaml
 apiVersion: v1

@@ -12,7 +12,7 @@ Pinger uygulamasının çalışması için ihtiyacı olan parametreleri, bir ver
 ##### 2. Adım, ctr+o belgeyi kayıt edelim.
 ##### 3. Adım, ctr+x ile nano'dan çıkalım.
 
-`sudo nano asres.cfg`{{execute T1}}
+`sudo nano adres.cfg`{{execute T1}}
 
 ```cfg
 208.67.222.222
@@ -77,7 +77,7 @@ configmap "adres-map-belge" deleted
 
 3.Adım, adres.cfg belgemizi editleyip yeni IP adresi eklyelim.
 
-`sudo nano asres.cfg`{{execute T1}}
+`sudo nano adres.cfg`{{execute T1}}
 
 ### Aşağıdaki yeni IP adreslerini ekleyip kayıt edip kapatalım
 
@@ -97,6 +97,8 @@ configmap "adres-map-belge" deleted
 4.Adım, adres-map-belge ConfigMap'ımızı tekrar oluşturalım.
 
 `kubectl create configmap adres-map-belge --from-file=./adres.cfg`{{execute T1}}
+
+** Kubelet senkronizasyon süresi varsayılan olarak 1 dakikadır, bu süreden önce ConfigMap'ın yeni değerleri yansımaya bilir.**
 
 5.Adım, adres-test-pod-belge Pod'umuzun arayüzüne erişip scriptimizi tekrar çalıştıralım.
 
@@ -167,4 +169,4 @@ configmap "adres-map" deleted
 
 ---
 
-##### Kubernetes'de ConfigMaps temel olarak bu yöntemler ile kullanılabilir, ConfigMaps bölümümüz burada tamamlanmıştır.
+##### Kubernetes'de ConfigMaps temel olarak bu yöntemler ile kullanılabilir, ConfigMaps bölümümüz burada tamamlanmıştır Arkadaşlar :). Umarım faydalı olmuştur.
