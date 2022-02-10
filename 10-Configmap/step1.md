@@ -37,7 +37,7 @@ Ekranlardan birinde, watch komutunu çalıştırarak kendimize bir gözlem termi
 
 Terminalde aşağıda ki komutu çalıştır.
 
-watch kubectl get cm,pods`{{execute T2}}
+`watch kubectl get cm,pods`{{execute T2}}
 
 ***kubectl get cm,pods*** tüm cluster'da oluşan pod ve ConfigMap nesnelerini getir anlamındadır.
 
