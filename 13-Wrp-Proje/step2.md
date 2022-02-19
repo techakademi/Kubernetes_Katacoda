@@ -58,7 +58,7 @@ secret/wrprss-mysql created
 
 #### 3. Adım, ctrl+x ile nano'dan çıkalım
 
-`sudo nano 01-MySQL-Configmap.yml`{{execute T1}}
+`sudo nano 01-Mysql-Configmap.yml`{{execute T1}}
 
 ```yaml
 apiVersion: v1
