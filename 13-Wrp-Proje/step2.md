@@ -174,7 +174,7 @@ Mysql terminalinde, mevcut veritabanlarını listelemek için ***show databases*
 | mysql              |
 | performance_schema |
 | sys                |
-| wordpress          |
+| kubeblog          |
 +--------------------+
 5 rows in set (0.002 sec)
 ```

@@ -72,7 +72,7 @@ Gözlem ekranımızdan Wordpress Servisine atanan port numarasını öğrenip ta
 
 ### Wordpress Kurulum ekranını aşağıdaki link  üzerinden gerçekleştirebiliriz.
 
-**<https://[[HOST_SUBDOMAIN>]]-3001-[[KATACODA_HOST]].environments.katacoda.com**
+https://[[HOST_SUBDOMAIN>]]-3001-[[KATACODA_HOST]].environments.katacoda.com
 
 Servisin port numarasını resimde ki alana yazarak uygulamaya erişebilirsiniz.
 
