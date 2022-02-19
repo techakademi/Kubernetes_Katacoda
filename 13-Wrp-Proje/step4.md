@@ -77,6 +77,8 @@ CronJob'larımızın başarılı bir şekilde çalışmaları halinde, veribirim
 
 5.Adım, Yedek klasörüne gidelim.
 
+`Yeni terminal ekranı aç.`{{execute node01}}
+
 `cd yedek`{{execute node01}}
 
 ```bash
