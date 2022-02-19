@@ -28,7 +28,7 @@ IURCUEByMGxhMDEh
 
 #### 3. Adım, ctr+x ile nano'dan çıkalım
 
-`sudo nano 00-MySQL-Secret.yml`{{execute T1}}
+`sudo nano 00-Mysql-Secret.yml`{{execute T1}}
 
 ```yaml
 apiVersion: v1
