@@ -81,7 +81,7 @@ CronJob'larımızın başarılı bir şekilde çalışmaları halinde, veribirim
 
 `ssh root@node01`{{execute T5}}
 
-`cd yedek`{{execute T5}}
+`cd /yedek`{{execute T5}}
 
 ```bash
 /yedek$
