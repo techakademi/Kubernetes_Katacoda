@@ -13,7 +13,7 @@ Uygulama adımlarına başlamadan önce, CronJOB Gözlem ekranı oluşturalım:
 `Yeni terminal ekranı aç.`{{execute T4}}
 
 Terminalde aşağıda ki komutu çalıştır:
-`watch kubectl get cronjobs` {{execute T4}}
+`watch kubectl get cronjobs`{{execute T4}}
 
 1.Adım, MySQL için Yeni veribirimi oluşturmak.
 

@@ -6,7 +6,7 @@ MySQL'i çalışabilir hale getirmek için ihtiyacımız olan  üç aşama var:
 
 1.1 MySQL root parolası kodlamak  
 
-`echo -n '!P@ssw0rd01!' | base64` {{execute T1}}
+`echo -n '!P@ssw0rd01!' | base64`{{execute T1}}
 
 ```bash
 IVBAc3N3MHJkMDEh
@@ -14,7 +14,7 @@ IVBAc3N3MHJkMDEh
 
 1.2 MySQL Wordrpess site parolası kodlamak:
 
-`echo -n '!DBP@r0la01!' | base64` {{execute T1}}
+`echo -n '!DBP@r0la01!' | base64`{{execute T1}}
 
 ```bash
 IURCUEByMGxhMDEh

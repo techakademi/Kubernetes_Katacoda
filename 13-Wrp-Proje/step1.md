@@ -19,13 +19,14 @@ Volume Gözlem ekranı:
 `Yeni terminal ekranı aç.`{{execute T2}}
 
 Terminalde aşağıda ki komutu çalıştır:
-`watch kubectl get pv,pvc -o wide` {{execute T2}}
+
+`watch kubectl get pv,pvc -o wide`{{execute T2}}
 
 Podlar Gözlem ekranı:
 
 `Yeni terminal ekranı aç.`{{execute T3}}
 
 Terminalde aşağıda ki komutu çalıştır:
-`watch kubectl get pod,svc,deploy -o wide` {{execute T3}}
+`watch kubectl get pod,svc,deploy -o wide`{{execute T3}}
 
 Bir sonraki bölüme geçerek ilk senaryomuz ile Kubernetes ile Wordpres & MySQL konumuzu işlemeye başlayalım.
