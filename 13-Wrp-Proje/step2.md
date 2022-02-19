@@ -40,6 +40,7 @@ data:
     mysql-password: IURCUEByMGxhMDEh
 stringData:
     mysql-username: dbroot
+    mysql-rootuser: root
 ```
 
 1.4 Secret'i kullanılmak üzere uygulayalım.

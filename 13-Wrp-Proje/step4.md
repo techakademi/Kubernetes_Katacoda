@@ -77,7 +77,7 @@ CronJob'larımızın başarılı bir şekilde çalışmaları halinde, veribirim
 
 5.Adım, Yedek klasörüne gidelim.
 
-`cd yedek`{{execute T1}}
+`cd yedek`{{execute node01}}
 
 ```bash
 /yedek$
@@ -85,7 +85,7 @@ CronJob'larımızın başarılı bir şekilde çalışmaları halinde, veribirim
 
 6.Adım, Yedek klasörünün içeriğini listeleyelim.
 
-`ls`{{execute T1}}
+`ls`{{execute node01}}
 
 ```bash
 mysql  wrprss
@@ -93,11 +93,11 @@ mysql  wrprss
 
 7.Adım, MySQL klasörüne gidelim.
 
-`cd mysql`{{execute T1}}
+`cd mysql`{{execute node01}}
 
 8.Adım, klasörünün içeriğini listeleyelim.
 
-`ls -la`{{execute T1}}
+`ls -la`{{execute node01}}
 
 ```bash
 total 16
@@ -109,7 +109,7 @@ drwxr-xr-x 4 root root 4096 Feb 19 09:12 ..
 
 9.Adım, Wordpress klasörünün içeriğini listeleyelim.
 
-`ls -la /yedek/wrprss/`{{execute T1}}
+`ls -la /yedek/wrprss/`{{execute node01}}
 
 ```bash
 total 19424

@@ -1,4 +1,4 @@
-apiVersion: batch/v1
+apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: wordpress-yedekleme
@@ -22,7 +22,7 @@ spec:
             image: alpine:3.15
             imagePullPolicy: Always
             command: ["/bin/sh", "-c"]
-            args: 
+            args:
               - tar -czvf /yedek/wrprss/wordpress_$(date '+%d-%m-%y').tar.gz  /var/www/html
             volumeMounts:
             - name: wordpress-veribirimi
