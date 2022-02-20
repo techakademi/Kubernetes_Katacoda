@@ -38,7 +38,14 @@ ConfigMap'ı kullanacak Pod oluşturmak için  [26-Conf-Dns-Env.yml](./assets/26
 pod/dns-kontrol-conf created
 ```
 
-4.Adım, dns-kontrol-conf Pdo'umuzun loglarını kontrol ederek sonucunu öğrenelim.
+Gözlem ekrarnından dns-kontrol-conf podumuzun görevini tamamlamış olduğunu kontrol edelim.
+
+NAME                     READY   STATUS      RESTARTS   AGE
+pod/dns-kontrol-conf     0/1     Completed   0          37s
+pod/merhabamap-env-pod   1/1     Running     0          2m40s
+
+
+4.Adım, dns-kontrol-conf Pdo'umuzun görevini tamamlamış olduğunu teyit ettikten sonra, loglarını kontrol ederek sonucunu öğrenelim.
 
 `kubectl logs dns-kontrol-conf`{{execute T1}}
 

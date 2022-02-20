@@ -29,9 +29,9 @@ Herhangi bir ConfigMap'ı Pod ile kullanımı dört şekilde olmakta:
 ConfigMap'lerimizi oluşturmadan önce, mümkünse kullandığınız terminali yatay şeklinde ikiye bölerek anlık gözlemleme olanağına sahip oluruz.
 Ekranlardan birinde, watch komutunu çalıştırarak kendimize bir gözlem terminali oluşturmuş olalım.
 
-```bash
-watch kubectl get cm,pods
-```
+`Yeni terminal ekranı aç.`{{execute T2}}
+
+`watch kubectl get cm,pods`{{execute T2}}
 
 ***kubectl get cm,pods*** tüm cluster'da oluşan pod ve secret nesnelerini getir anlamındadır.
 
@@ -99,6 +99,10 @@ Konteyner arayüzünde bulunduğumuz sırada **echo** ile ortam değişkeni olar
 merhaba-Kubernetes-Dunyasi
 / #
 ```
+
+Exit komutu ile podumuzdan çıkış yapalım.
+
+`exit`{{execute T1}}
 
 merhaba-map ConfigMap'ında oluşturduğumuz selam değişkeninin değeri olan ***"merhaba-Kubernetes-Dunyasi"*** konteynerimiz tarafından okunarak aktarımı bu şekilde gerçekleşmiş oldu.
 

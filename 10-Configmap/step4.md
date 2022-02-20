@@ -8,7 +8,7 @@ Pinger uygulamasının çalışması için ihtiyacı olan parametreleri, bir ver
 
 1.Adım, Uygulama değişkenimizi içeren parametreleri barındıran manifest'imizi oluşturalım.
 
-`sudo nano asres.cfg`{{execute T1}}
+`sudo nano adres.cfg`{{execute T1}}
 
 ### Aşağıdaki IP adreslerini ekleyip kayıt edip kapatalım
 
@@ -69,17 +69,13 @@ Arayüzden çıkıp, ConfigMap'ımızı silelim, adres.cfg belgemize yeni IP adr
 
 `kubectl delete configmap adres-map-belge`{{execute T1}}
 
-2.Adım, adres-map-belge isimli ConfigMap'ımızı silelim.
-
-`kubectl delete configmap adres-map-belge`{{execute T1}}
-
 ```bash
 configmap "adres-map-belge" deleted
 ```
 
 3.Adım, adres.cfg belgemizi editleyip yeni IP adresi eklyelim.
 
-`sudo nano asres.cfg`{{execute T1}}
+`sudo nano adres.cfg`{{execute T1}}
 
 ### Aşağıdaki yeni IP adreslerini ekleyip kayıt edip kapatalım
 
@@ -154,15 +150,3 @@ configmap "adres-map-belge" deleted
 configmap "adres-map" deleted
 
 Kubernetes'de secret kullanımı temel olarak bu yöntemler ile gerçekleştirilmektedir.Bu bölümüde burada tamamalamış olduk arkadaşlar, bir sonra ki bölümde görüşmek üzere hoşçakalın.
-
-___
-
-### Bu Bölümün Menüsüne çık [12-ConfigMap'a Geri Dön](https://github.com/techakademi/KubernetesDersler/tree/master/12-ConfigMap)
-
-## Ana Bölüm [Kubernetes Derlser'e geri dön](https://github.com/techakademi/KubernetesDersler)
-
-**Referanslar:**
-
-**[ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)**
-
-**[Environment Variable](https://en.wikipedia.org/wiki/Environment_variable)**

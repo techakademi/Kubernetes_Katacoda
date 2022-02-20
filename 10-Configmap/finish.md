@@ -14,8 +14,9 @@ Kubernetes Secrets, hassas veri barındıran nesneleri pod'larda kullanmanın en
 
 ## Referanslar: ##
 
-**Referanslar:**
-**[Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)**
+**[ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)**
+
+**[Environment Variable](https://en.wikipedia.org/wiki/Environment_variable)**
 # **&darr;**
 
 ------

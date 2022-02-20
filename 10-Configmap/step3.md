@@ -26,7 +26,7 @@ data:
 
 2.Adım, ConfigMap'ımızı oluşturalım:
 
-`kubectl apply -f 26-1-Dns-Config.yml`{{execute T1}}
+`kubectl apply -f 27-1-Pinger-Config.yml`{{execute T1}}
 
 ```bash
 configmap/adres-map created
@@ -40,6 +40,15 @@ ConfigMap'ı kullanacak Pod oluşturmak için  [27-Pinger-Conf_Vol.yml](./assets
 
 ```bash
 pod/adres-test-pod created
+```
+
+Bir önceki Pod'umuzda olduğu gibi adres-test-pod'umuzun da görevini tamamlamış olduğunu gözlem ekranımızdan teyit edelim.
+
+```bash
+NAME                     READY   STATUS      RESTARTS   AGE
+pod/adres-test-pod       0/1     Completed   0          23s
+pod/dns-kontrol-conf     0/1     Completed   0          4m11s
+pod/merhabamap-env-pod   1/1     Running     0          6m14s
 ```
 
 4.Adım, adres-test-pod Pdo'umuzun loglarını kontrol ederek sonucunu öğrenelim.
@@ -97,7 +106,7 @@ pod/adres-test-pod deleted
 pod/adres-test-pod created
 ```
 
-9.Adım, Podumuzun log'unu kontrol ederek sonucunu görelim.
+9.Adım, Podumuzun log'unu tekrar kontrol ederek sonucunu görelim.
 
 `kubectl logs adres-test-pod`{{execute T1}}
 
