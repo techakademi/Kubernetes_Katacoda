@@ -21,11 +21,6 @@
       {
         "title": "Manifest belgesi kullanarak secret oluşturmak.",
         "text": "step4.md"
-      },
-
-      {
-        "title": "Belge veya dosyadan secret oluşturmak.",
-        "text": "step5.md"
       }
 
     ],
