@@ -48,20 +48,26 @@ Tekil çalışan pod'umuza trafiği ulaştırmak için kubectl port-forward komu
 Port-forward komutunda, --address opsiyonunu kullanarak tüm adreslerde 3001 portunu dinleyerek, 3000 portuna iletmesini istiyoruz. Eğer --address opsiyonunun kullanmaz isek, uygulama yalnızca yerel olarak erişilebilir olur.
 
 
-```
+Çalışan deployment'in ID'sini görüntülemek için aşağıda ki komutu kullanarak ID'mizi öğrenelim.
+
+`kubectl get deployment -o wide`{{execute T1}}
+
+Deploymentimizin IDS'si ile port-forward komutu ile 3001 portuna gelen trafiği pod'un 3000 portuna yönlendirelim.
+
+### Bu komutda Deployment'in ID'sini kullanmayı unutma, bu komutu elle yazarak çalıştırmalısın.
+
 kubectl port-forward merhaba-dunya-deploy-<deployment-ID> --address 0.0.0.0 3001:3000
-```
 
 Port forward işlemi gerçekleşince, terminal ekranı 3001 portunu dinlemeye başlayacaktır.
 
 ```
-Forwarding from 0.0.0.0:3001 -> 80
+Forwarding from 0.0.0.0:3001 -> 3000
 ```
 
 ---
 ### Merhaba Dünya uygulamamızı aşağıdaki link  üzerinden kontrol edebiliriz:
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
+https://[[HOST_SUBDOMAIN]]-3001-[[KATACODA_HOST]].environments.katacoda.com
 
 ---
 
