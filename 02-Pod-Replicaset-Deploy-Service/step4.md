@@ -50,7 +50,7 @@ Port-forward komutunda, --address opsiyonunu kullanarak tüm adreslerde 3001 por
 
 Çalışan deployment'in ID'sini görüntülemek için aşağıda ki komutu kullanarak ID'mizi öğrenelim.
 
-`kubectl get deployment -o wide`{{execute T1}}
+`kubectl get pods -o wide`{{execute T1}}
 
 Deploymentimizin IDS'si ile port-forward komutu ile 3001 portuna gelen trafiği pod'un 3000 portuna yönlendirelim.
 
