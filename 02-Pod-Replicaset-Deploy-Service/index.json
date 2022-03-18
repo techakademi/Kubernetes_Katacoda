@@ -1,0 +1,52 @@
+{
+  "title": "02-Pod-Replicaset-Deploy-Service Senaryosu",
+  "description": "Bu bölümde, Pod, Replicaset, Deployment ve Servis oluşturma uygulamasını gerçekleştireceğiz.",
+  "difficulty": "Giriş Seviyesi",
+  "time": "20",
+  "details": {
+    "steps": [
+      {
+        "title": "01 - Pod Oluşturma",
+        "text": "step1.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "02 - Replicaset Oluşturma",
+        "text": "step2.md",
+        "code": "step2-background.sh"
+      },
+      {
+        "title": "03 - Deployment Oluşturma",
+        "text": "step3.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "04 - Service Oluşturma",
+        "text": "step4.md",
+        "code": "temizle.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "baslangic.sh",
+      "credits": "[Kişisel blog Hamza GURCAN](http://www.hamzagurcan.com)"
+      
+
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [{"file": "*.yml", "target": "/root"}]
+    }
+  },
+  "environment": {
+    "hideintro": false,
+    "uimessage1": "\u001b[32mİyi dersler dilerim :).\u001b[m\r\n",
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
+
