@@ -1,0 +1,78 @@
+{
+  "title": "06-Jobs & Cronjob Oluşturma Senaryosu",
+  "description": "Bu bölümde, Jobs & Cronjobs konularını işleyerek görevler ve zamanlanmış görevler oluşturacağız.",
+  "difficulty": "Giriş Seviyesi",
+  "time": "20",
+  "details": {
+    "steps": [
+      {
+        "title": "Birinci Görevi Oluşturma",
+        "text": "step1.md",
+        "code": "temizle1.sh"
+      },
+      {
+        "title": "İkinci Görevi Oluşturma",
+        "text": "step2.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "Üçüncü Görevi Oluşturma",
+        "text": "step3.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "Dördüncü Görevi Oluşturma",
+        "text": "step4.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "Beşinci Görevi Oluşturma",
+        "text": "step5.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "Altıncı Görevi Oluşturma",
+        "text": "step6.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "Yedinci Görevi Oluşturma",
+        "text": "step7.md",
+        "code": "temizle.sh"
+      },
+      {
+        "title": "Sekizinci Görevi Oluşturma",
+        "text": "step8.md",
+        "code": "cronjob-temizle.sh"
+      },
+      {
+        "title": "Dokuzuncu Görevi Oluşturma",
+        "text": "step9.md",
+        "code": "cronjob-temizle.sh"
+      }
+
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "baslangic.sh",
+      "credits": "[Kişisel blog Hamza GURCAN](http://www.hamzagurcan.com)"
+    },
+
+    "finish": {
+      "text": "finish.md"
+    },
+
+    "assets": {
+      "host01": [{"file": "*.yml", "target": "/root"}]
+    }
+  },
+  "environment": {
+    "hideintro": false,
+    "uimessage1": "\u001b[32mİyi dersler dilerim :).\u001b[m\r\n",
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
+
