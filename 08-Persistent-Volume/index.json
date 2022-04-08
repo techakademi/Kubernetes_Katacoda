@@ -1,0 +1,44 @@
+{
+  "title": "08-Persistent Volume Oluşturma Senaryosu",
+  "description": "Bu bölümde, Persistent Volume konusunu işliyoruz.",
+  "difficulty": "Giriş Seviyesi",
+  "time": "15",
+  "details": {
+    "steps": [
+      {
+        "title": "Persistent Volume, Persistent Clime Oluşturma",
+        "text": "step1.md"
+      },
+      {
+        "title": "Reclaim Policy, Retain durumu Senaryosu",
+        "text": "step2.md"
+      },
+      {
+        "title": "Reclaim Policy, Delete durumu Senaryosu",
+        "text": "step3.md"
+      }
+
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "baslangic.sh",
+      "credits": "[Kişisel blog Hamza GURCAN](http://www.hamzagurcan.com)"
+    },
+
+    "finish": {
+      "text": "finish.md"
+    },
+
+    "assets": {
+      "host01": [{"file": "*.yml", "target": "/root"}]
+    }
+  },
+  "environment": {
+    "hideintro": false,
+    "uimessage1": "\u001b[32mİyi dersler dilerim :).\u001b[m\r\n",
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
